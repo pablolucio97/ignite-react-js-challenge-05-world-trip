@@ -8,7 +8,7 @@ export default function Header() {
     return (
         <Flex
             as='header'
-            width='100vh'
+            width='100vw'
             flex='1'
             justify='center'
             align='center'
