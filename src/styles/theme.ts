@@ -12,6 +12,10 @@ export const theme = extendTheme({
         },
         white:{
             "900":"#FFFFFF"
+        },
+        yellow:{
+          "900":"#FFBA08",
+          "200":"#FFBA08"
         }
       },
       fonts: {
@@ -23,7 +27,7 @@ export const theme = extendTheme({
           body: {
             bg: "white.900",
             color: "gray.400",
-            overflow:'hidden'
+            overflowX:'hidden'
           },
         },
       },

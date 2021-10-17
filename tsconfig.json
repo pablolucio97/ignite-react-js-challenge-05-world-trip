@@ -1,6 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es5",
+    "target": "es6",
     "lib": [
       "dom",
       "dom.iterable",
@@ -25,5 +25,8 @@
   ],
   "exclude": [
     "node_modules"
+  ],
+  "files": [
+    "src/types/react-slideshow-image/index.d.ts"
   ]
 }
