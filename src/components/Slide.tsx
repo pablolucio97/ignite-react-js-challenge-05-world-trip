@@ -65,6 +65,7 @@ export default function Slide({ slides }: SlidesProps) {
                                 display: 'flex',
                                 justifyContent: 'center',
                                 alignItems: 'center',
+                                backgroundSize: 'cover',
 
                             }}>
                             <Text

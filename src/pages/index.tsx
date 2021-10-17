@@ -3,7 +3,8 @@ import Header from '../components/Header'
 import Banner from '../components/Banner'
 import TripOptionContainer from '../components/TripOptionContainer'
 import Slide from '../components/Slide'
-import {slideImages} from '../utils/data'
+import { slideImages } from '../utils/data'
+import Image from 'next/image'
 
 export default function Home() {
   return (
@@ -24,7 +25,20 @@ export default function Home() {
         display='flex'
         justify='center'
         mt='16'
+        position='relative'
       >
+        {/*eslint-disable-next-line*/}
+        <img
+          width='420'
+          height='270'
+          src='/airplane.svg'
+          alt='worldtrip'
+          style={{
+            position: 'absolute',
+            top: '-320px',
+            right: '10%'
+          }}
+        />
         <TripOptionContainer
           backgroundImage='/museum.svg'
           tripOption='clássico'
