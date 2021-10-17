@@ -3,11 +3,10 @@ import { Box, Text } from '@chakra-ui/react'
 
 type TripOptionContainerProps = {
     backgroundImage: string;
-    backgroundImageAlt: string;
     tripOption: string
 }
 
-export default function TripOptionContainer({ backgroundImage, backgroundImageAlt, tripOption }: TripOptionContainerProps) {
+export default function TripOptionContainer({ backgroundImage, tripOption }: TripOptionContainerProps) {
     return (
         <Box
             m='8'
@@ -16,7 +15,7 @@ export default function TripOptionContainer({ backgroundImage, backgroundImageAl
                 width='85'
                 height='85'
                 src={backgroundImage}
-                alt={backgroundImageAlt}
+                alt='wolrd-trip'
             />
             <Text
                 fontSize='1rem'

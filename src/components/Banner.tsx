@@ -14,9 +14,9 @@ export default function Banner({ backgroundImage, height }: BannerProps) {
             flexDirection='column'
             justify='center'
             alignItems='flex-start'
-
-
             backgroundImage={backgroundImage}
+            backgroundRepeat='no-repeat'
+            backgroundSize='cover'
         >
 
             <Text
