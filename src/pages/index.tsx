@@ -19,6 +19,9 @@ export default function Home() {
         <Banner
           height={320}
           backgroundImage='/background.png'
+          showTitle
+          showSubtitle
+          title='5 Continentes, infinitas possibilidades.'
         />
       </Flex>
       <Flex
