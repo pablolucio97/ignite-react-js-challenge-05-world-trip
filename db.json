@@ -1,0 +1,204 @@
+{
+    "continents": [
+        {
+            "id": 1,
+            "continent": "Europa",
+            "cover" : "https://images.unsplash.com/photo-1571778650479-ebcd46a2fecf?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+            "countries": 50,
+            "linguages": 42,
+            "cities": 27,
+            "most_visited_cities": [
+               {
+                   "city" : "Londres",
+                   "country" : "Reino Unido",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Flag_of_the_United_Kingdom_%283-5%29.svg/255px-Flag_of_the_United_Kingdom_%283-5%29.svg.png",
+                   "city_background" : "https://inglaterrabrasil.com.br/files/2013/11/conhe%C3%A7a-londres.jpg"
+               },
+               {
+                   "city" : "Paris",
+                   "country" : "França",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Flag_of_France.svg/2560px-Flag_of_France.svg.png",
+                   "city_background" : "https://photos.mandarinoriental.com/is/image/MandarinOriental/paris-2017-home?wid=2880&hei=1280&fmt=jpeg&crop=9,336,2699,1200&anchor=1358,936&qlt=75,0&fit=wrap&op_sharpen=0&resMode=sharp2&op_usm=0,0,0,0&iccEmbed=0&printRes=72"
+               },
+               {
+                   "city" : "Roma",
+                   "country" : "Itália",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/0/03/Flag_of_Italy.svg",
+                   "city_background" : "https://www.melhoresdestinos.com.br/wp-content/uploads/2019/02/passagens-aereas-roma-capa2019-01-820x430.jpg"
+               },
+               {
+                   "city" : "Praga",
+                   "country" : "República Tcheca",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_Czech_Republic.svg/1280px-Flag_of_the_Czech_Republic.svg.png",
+                   "city_background" : "https://segredosdomundo.r7.com/wp-content/uploads/2020/02/praga-historia-curiosidades-e-principais-atracoes-turisticas.jpg"
+               },
+               {
+                   "city" : "Amsterdã",
+                   "country" : "Holanda",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/20/Flag_of_the_Netherlands.svg/255px-Flag_of_the_Netherlands.svg.png",
+                   "city_background" : "https://cdn.getyourguide.com/img/location/5ffeb0b587f00.jpeg/88.jpg"
+               }
+            ]
+        },
+        {
+            "id": 2,
+            "continent": "Asia",
+            "cover" : "https://images.unsplash.com/photo-1535139262971-c51845709a48?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+            "countries": 13,
+            "linguages": 22,
+            "cities": 37,
+            "most_visited_cities": [
+               {
+                   "city" : "Dubai",
+                   "country" : "Emirados Árabes Unidos",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/c/cb/Flag_of_the_United_Arab_Emirates.svg/255px-Flag_of_the_United_Arab_Emirates.svg.png",
+                   "city_background" : "https://www.viajali.com.br/wp-content/uploads/2019/12/dubai-1.jpg"
+               },
+               {
+                   "city" : "Tóquio",
+                   "country" : "Japão",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/9/9e/Flag_of_Japan.svg/1200px-Flag_of_Japan.svg.png",
+                   "city_background" : "https://guia.alem.com.br/wp-content/uploads/2019/10/tokyo_shinjuku-e1570711583626.jpg"
+               },
+               {
+                   "city" : "Singapura ",
+                   "country" : "Singapura",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/4/48/Flag_of_Singapore.svg/1200px-Flag_of_Singapore.svg.png",
+                   "city_background" : "https://prefiroviajar.com.br/wp-content/uploads/marin-bay-singapura.jpg"
+               },
+               {
+                   "city" : "HongKong",
+                   "country" : "China",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Flag_of_the_People%27s_Republic_of_China.svg/640px-Flag_of_the_People%27s_Republic_of_China.svg.png",
+                   "city_background" : "https://www.infoescola.com/wp-content/uploads/2020/08/hong-kong_693729124.jpg"
+               },
+               {
+                   "city" : "Bangcoc",
+                   "country" : "Tailândia",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a9/Flag_of_Thailand.svg/1200px-Flag_of_Thailand.svg.png",
+                   "city_background" : "https://www.jornaldeturismo.tur.br/images/stories/2017/ago2017/Bangcoc.jpg"
+               }
+            ]
+        },
+        {
+            "id": 3,
+            "continent": "America",
+            "cover" : "https://images.unsplash.com/photo-1501466044931-62695aada8e9?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1087&q=80",
+            "countries": 50,
+            "linguages": 42,
+            "cities": 27,
+            "most_visited_cities": [
+               {
+                   "city" : "Nova York",
+                   "country" : "EUA",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png",
+                   "city_background" : "https://ci-prod.imgix.net/upload/galeriadeimagens/00205891.jpg"
+               },
+               {
+                   "city" : "Las vegas",
+                   "country" : "EUA",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a4/Flag_of_the_United_States.svg/2560px-Flag_of_the_United_States.svg.png",
+                   "city_background" : "https://cdn.getyourguide.com/img/location/5ffeb496e3e09.jpeg/88.jpg"
+               },
+               {
+                   "city" : "São Paulo",
+                   "country" : "Brasil",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1024px-Flag_of_Brazil.svg.png",
+                   "city_background" : "https://www.consultoriarr.com.br/wp-content/uploads/2020/01/img-empreender-em-sao-paulo-o-que-voce-precisa-saber-sobre-o-assunto.jpg"
+               },
+               {
+                   "city" : "Cancún",
+                   "country" : "México",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fc/Flag_of_Mexico.svg/2560px-Flag_of_Mexico.svg.png",
+                   "city_background" : "https://dynamic-media-cdn.tripadvisor.com/media/photo-o/1c/46/9c/4e/now-emerald-cancun-hotel.jpg?w=900&h=-1&s=1"
+               },
+               {
+                   "city" : "Rio de Janeiro",
+                   "country" : "Brasil",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/05/Flag_of_Brazil.svg/1024px-Flag_of_Brazil.svg.png",
+                   "city_background" : "https://www.costacruzeiros.com/content/dam/costa/costa-magazine/article-images/what-to-see-in-rio-de-janeiro/rio-de-janeiro-panorama_YuJas-Shutterstock_2.jpg.image.694.390.low.jpg"
+               }
+            ]
+        },
+        {
+            "id": 4,
+            "continent": "Oceania",
+            "cover" : "https://images.unsplash.com/photo-1622732794483-fc1de4dcb3b1?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1470&q=80",
+            "countries": 50,
+            "linguages": 42,
+            "cities": 27,
+            "most_visited_cities": [
+               {
+                   "city" : "Sidney",
+                   "country" : "Austrália",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.svg.png",
+                   "city_background" : "https://www.estudarfora.org.br/wp-content/webp-express/webp-images/uploads/2020/05/sidney.jpg.webp"
+               },
+               {
+                   "city" : "Ilha Kangaroo",
+                   "country" : "Austrália",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/8/88/Flag_of_Australia_%28converted%29.svg/1280px-Flag_of_Australia_%28converted%29.svg.png",
+                   "city_background" : "https://www.girassolviagens.com/wp-content/uploads/2019/09/Ilha-Kangaroo-1-900x530.jpg"
+               },
+               {
+                   "city" : "Milford Sound",
+                   "country" : "Nova Zelândia",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/255px-Flag_of_New_Zealand.svg.png",
+                   "city_background" : "https://www.newzealand.com/assets/Videos/d116723e43/img-1536100133-8352-2999-hqdefault__aWxvdmVrZWxseQo_FocalPointCropWzQyMCw5NjAsNTAsNTAsNzUsImpwZyIsNjUsMi41XQ.jpg"
+               },
+               {
+                   "city" : "Queenstown ",
+                   "country" : "Nova Zelândia",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/255px-Flag_of_New_Zealand.svg.png",
+                   "city_background" : "https://www.newzealand.com/assets/Operator-Database/img-1612225297-3494-11563-gondola-hero-shot__aWxvdmVrZWxseQo_CropResizeWzk0MCw1MzAsNzUsInBuZyJd.png"
+               },
+               {
+                   "city" : "Waikato",
+                   "country" : "Nova Zelândia",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/3e/Flag_of_New_Zealand.svg/255px-Flag_of_New_Zealand.svg.png",
+                   "city_background" : "https://www.newzealand.com/assets/Tourism-NZ/Hamilton-Waikato/15f589a3e3/img-1536927375-636-10344-57596997-F7A0-BDB8-018951B87B608AAC__aWxvdmVrZWxseQo_FocalPointCropWzQyMCw5NjAsNTAsNTAsNzUsImpwZyIsNjUsMi41XQ.jpg"
+               }
+            ]
+        },
+        {
+            "id": 5,
+            "continent": "África",
+            "cover" : "https://images8.alphacoders.com/995/thumb-1920-995701.jpg",
+            "countries": 50,
+            "linguages": 42,
+            "cities": 27,
+            "most_visited_cities": [
+               {
+                   "city" : "Cairo",
+                   "country" : "Egito",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fe/Flag_of_Egypt.svg/255px-Flag_of_Egypt.svg.png",
+                   "city_background" : "https://freeway.tur.br/userfiles/images/roteiro-egito-historia-cultura%282%29.png"
+               },
+               {
+                   "city" : " Ilha de Gorée",
+                   "country" : "Senegal",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/f/fd/Flag_of_Senegal.svg/255px-Flag_of_Senegal.svg.png",
+                   "city_background" : "https://catracalivre.com.br/wp-content/thumbnails/RdBhyYYU-PNFNVNowX1uIi2sTp8=/wp-content/uploads/2021/04/goree-island-senegal-1201983-1279x849-1-910x605.jpg"
+               },
+               {
+                   "city" : "Chefchaouen",
+                   "country" : "Marrocos",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2c/Flag_of_Morocco.svg/1280px-Flag_of_Morocco.svg.png",
+                   "city_background" : "https://catracalivre.com.br/wp-content/thumbnails/h4So_ZIsD2Zm7yBOyveX9VL-pKg=/wp-content/uploads/2021/04/chefchaouen-1921173-1280-910x606.jpg"
+               },
+               {
+                   "city" : "Ilha do Sal",
+                   "country" : "Cabo Verde",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/Flag_of_Cape_Verde.svg/1280px-Flag_of_Cape_Verde.svg.png",
+                   "city_background" : "https://catracalivre.com.br/wp-content/thumbnails/rroJ4U2b9to7At1WNtwaHVdkY6g=/wp-content/uploads/2021/04/cape-verde-islands-5-1524243-1279x759-1-910x541.jpg"
+               },
+               {
+                   "city" : "Kolmanskop",
+                   "country" : "Namíbia",
+                   "country_flag" : "https://upload.wikimedia.org/wikipedia/commons/thumb/0/00/Flag_of_Namibia.svg/1200px-Flag_of_Namibia.svg.png",
+                   "city_background" : "https://catracalivre.com.br/wp-content/thumbnails/dU9ibOjrbAMgNRwDOLhIAa4yZ0A=/wp-content/uploads/2021/04/africa-1788494-1280-910x604.jpg"
+               }
+            ]
+        }       
+    ]
+}

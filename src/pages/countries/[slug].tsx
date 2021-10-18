@@ -1,11 +1,34 @@
-import { Flex, Box, Text, Heading, HStack, useBreakpointValue } from '@chakra-ui/react'
+import {
+    Flex,
+    Box,
+    Text,
+    Heading,
+    HStack,
+    useBreakpointValue,
+    Popover,
+    PopoverTrigger,
+    PopoverContent,
+    PopoverHeader,
+    PopoverBody,
+    PopoverFooter,
+    PopoverArrow,
+    PopoverCloseButton,
+    Button
+} from '@chakra-ui/react'
+import { AiOutlineInfoCircle } from 'react-icons/ai'
+
+import CountryCard from '../../components/CountryCard'
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
-import { AiOutlineInfoCircle } from 'react-icons/ai'
-import CountryCard from '../../components/CountryCard'
 
 export default function Countries() {
-   return (
+
+    const wideScreen = useBreakpointValue({
+        base: false,
+        lg: true
+    })
+
+    return (
         <Flex
             display='flex'
             flexDirection='column'
@@ -25,9 +48,9 @@ export default function Countries() {
                 justifyContent='center'
             >
                 <Box
-                    width={['100%' , '50%']}
+                    width={['98%', '50%']}
                     maxWidth={600}
-                    p={['4', '8']}
+                    p='8'
                 >
                     <Text
                         textAlign='justify'
@@ -82,7 +105,36 @@ export default function Countries() {
                             display='flex'
                         >
                             cidades + 100
-                            <AiOutlineInfoCircle size={12} />
+                            {wideScreen && (
+                                <Popover
+                                >
+                                    <PopoverTrigger>
+                                        <Button
+                                            variant='ghost'
+                                            _focus={{
+                                                border: 'none',
+                                                outline: 'none',
+                                                background: 'trasnsparent'
+                                            }}
+                                        >
+                                            <AiOutlineInfoCircle size={16} />
+                                        </Button>
+                                    </PopoverTrigger>
+                                    <PopoverContent
+                                        width={['156px', '240px']}
+                                    >
+
+                                        <PopoverArrow />
+
+                                        <PopoverBody
+                                            p={['2', '4']}
+                                            fontWeight='400'
+                                        >
+                                            Explore todas as cidades disponíveis.
+                                        </PopoverBody>
+                                    </PopoverContent>
+                                </Popover>
+                            )}
                         </Text>
                     </Box>
                 </HStack>
@@ -94,25 +146,25 @@ export default function Countries() {
                 alignSelf='center'
                 width={['88vw', '900px']}
                 minWidth='240px'
+            >
+                <Heading
+                    fontWeight='500'
+                    mt='8'
+                    mb='2'
                 >
-            <Heading
-                fontWeight='500'
-                mt='8'
-                mb='2'
-            >
-                Cidades +100
-            </Heading>
-            <HStack
-                display='flex'
-                direction={['column', 'row']}
-                flexWrap='wrap'
-                justifyContent='flex-start'
-                mb='120px'
-            >
-                <CountryCard />
-                <CountryCard />
+                    Cidades +100
+                </Heading>
+                <HStack
+                    display='flex'
+                    direction={['column', 'row']}
+                    flexWrap='wrap'
+                    justifyContent='flex-start'
+                    mb='120px'
+                >
+                    <CountryCard />
+                    <CountryCard />
 
-            </HStack>
+                </HStack>
             </Flex>
         </Flex>
     )

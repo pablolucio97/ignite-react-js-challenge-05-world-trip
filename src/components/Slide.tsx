@@ -5,9 +5,8 @@ import { Text } from '@chakra-ui/react'
 
 
 type SlideProps = {
-    title: string;
-    caption: string;
-    imgUrl: string;
+    cover: string;
+    continent: string;
 }
 
 type SlidesProps = {
@@ -57,7 +56,7 @@ export default function Slide({ slides }: SlidesProps) {
                     <div className="each-slide" key={index} >
                         <div style=
                             {{
-                                'backgroundImage': `url(${slideImage.imgUrl})`,
+                                'backgroundImage': `url(${slideImage.cover})`,
                                 height: '450px',
                                 width: '100%',
                                 marginTop: '48px',
@@ -66,26 +65,20 @@ export default function Slide({ slides }: SlidesProps) {
                                 justifyContent: 'center',
                                 alignItems: 'center',
                                 backgroundSize: 'cover',
+                                filter: 'brightness(.64)'
 
                             }}>
                             <Text
-                                fontSize={['1rem', '1.24rem', '1.6rem']}
+                                fontSize={['2rem', '2.24rem', '2.6rem']}
                                 mb='4rem'
-                                color='gray.200'
+                                color='white.900'
                                 fontWeight='700'
-                                mr='-12rem'
+                                alignSelf='center'
+                                filter= 'brightness(1)'
                                 >
-                                {slideImage.title}
+                                {slideImage.continent}
                             </Text>
-                            <Text
-                                fontSize={['1rem', '1.24rem', '1.6rem']}
-                                mt='2rem'
-                                color='gray.200'
-                                width='280px'
-                                textAlign='center'
-                            >
-                                {slideImage.caption}
-                            </Text>
+               
                         </div>
                     </div>
                 ))}

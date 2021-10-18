@@ -6,7 +6,7 @@ import Slide from '../components/Slide'
 import { slideImages } from '../utils/data'
 import Image from 'next/image'
 
-export default function Home() {
+export default function Home({continents}) {
 
   const wideScreen = useBreakpointValue({
     bg: false,
@@ -106,8 +106,26 @@ export default function Home() {
         </Text>
       </Box>
       <Slide
-        slides={slideImages}
-      />
+        slides={continents}
+      /> 
     </Flex>
   )
+}
+
+export const getStaticProps = async () => {
+
+  const data = await fetch('http://localhost:3333/continents')
+  const response = await data.json()
+  const continents = response.map(continent => {
+    return{
+      continent: continent.continent,
+      cover: continent.cover
+    }
+  })
+  
+  return{
+    props:{
+      continents: continents
+    }
+  }
 }
