@@ -9,7 +9,7 @@ export default function CountryCard() {
             width='256px'
             height='280px'
             boxShadow='0 0 2px 1px #FFBA08'
-            m='8'
+            m='16px'
         >
             <Image
                 src='/londres_img.png'
@@ -20,7 +20,7 @@ export default function CountryCard() {
             <HStack
                 display='flex'
                 justifyContent='space-between'
-                marginRight='8'
+                paddingRight='8'
             >
                 <VStack
                     display='flex'
@@ -51,7 +51,11 @@ export default function CountryCard() {
                     <img
                         src='/londres_img.png'
                         alt='world-trip'
-                        style={{ borderRadius: '50%', height: '32px', width: '32px' }}
+                        style={{
+                            borderRadius: '50%',
+                            height: '32px',
+                            width: '32px'
+                        }}
                     />
                 </Box>
             </HStack>

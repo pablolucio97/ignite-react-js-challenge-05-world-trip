@@ -69,7 +69,7 @@ export default function Slide({ slides }: SlidesProps) {
 
                             }}>
                             <Text
-                                fontSize='2rem'
+                                fontSize={['1rem', '1.24rem', '1.6rem']}
                                 mb='4rem'
                                 color='gray.200'
                                 fontWeight='700'
@@ -78,7 +78,7 @@ export default function Slide({ slides }: SlidesProps) {
                                 {slideImage.title}
                             </Text>
                             <Text
-                                fontSize='1.242rem'
+                                fontSize={['1rem', '1.24rem', '1.6rem']}
                                 mt='2rem'
                                 color='gray.200'
                                 width='280px'

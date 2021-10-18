@@ -1,11 +1,11 @@
-import { Flex, Box, Text, Heading, HStack } from '@chakra-ui/react'
+import { Flex, Box, Text, Heading, HStack, useBreakpointValue } from '@chakra-ui/react'
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
 import CountryCard from '../../components/CountryCard'
 
 export default function Countries() {
-    return (
+   return (
         <Flex
             display='flex'
             flexDirection='column'
@@ -21,12 +21,13 @@ export default function Countries() {
             />
             <Flex
                 display='flex'
+                direction={['column', 'row']}
                 justifyContent='center'
             >
                 <Box
-                    width='50%'
+                    width={['100%' , '50%']}
                     maxWidth={600}
-                    p='8'
+                    p={['4', '8']}
                 >
                     <Text
                         textAlign='justify'
@@ -35,7 +36,7 @@ export default function Countries() {
                         A Europa é, por convenção, um dos seis continentes do mundo.
                         Compreendendo a península ocidental da Eurásia, a Europa geralmente
                         divide-se da Ásia a leste pela divisória de águas dos montes Urais,
-                        o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste
+                        o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
                     </Text>
                 </Box>
                 <HStack
@@ -86,14 +87,33 @@ export default function Countries() {
                     </Box>
                 </HStack>
             </Flex>
+            <Flex
+                display='flex'
+                flexDirection='column'
+                justifyContent={['center', 'flex-start']}
+                alignSelf='center'
+                width={['88vw', '900px']}
+                minWidth='240px'
+                >
             <Heading
-                paddingLeft={['2rem', '6rem']}
                 fontWeight='500'
-                my='8'
+                mt='8'
+                mb='2'
             >
                 Cidades +100
             </Heading>
-            <CountryCard />
+            <HStack
+                display='flex'
+                direction={['column', 'row']}
+                flexWrap='wrap'
+                justifyContent='flex-start'
+                mb='120px'
+            >
+                <CountryCard />
+                <CountryCard />
+
+            </HStack>
+            </Flex>
         </Flex>
     )
 }

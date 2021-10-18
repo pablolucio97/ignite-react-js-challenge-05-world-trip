@@ -1,4 +1,4 @@
-import { Flex, Text, Box, Divider } from '@chakra-ui/react'
+import { Flex, Text, Box, Divider, useBreakpointValue } from '@chakra-ui/react'
 import Header from '../components/Header'
 import Banner from '../components/Banner'
 import TripOptionContainer from '../components/TripOptionContainer'
@@ -7,6 +7,12 @@ import { slideImages } from '../utils/data'
 import Image from 'next/image'
 
 export default function Home() {
+
+  const wideScreen = useBreakpointValue({
+    bg: false,
+    lg: true
+  })
+
   return (
     <Flex
       display='flex'
@@ -26,22 +32,27 @@ export default function Home() {
       </Flex>
       <Flex
         display='flex'
+        direction={['column', 'row']}
         justify='center'
         mt='16'
         position='relative'
+        flexWrap='wrap'
       >
-        {/*eslint-disable-next-line*/}
-        <img
-          width='420'
-          height='270'
-          src='/airplane.svg'
-          alt='worldtrip'
-          style={{
-            position: 'absolute',
-            top: '-320px',
-            right: '10%'
-          }}
-        />
+        {wideScreen && (
+        /*eslint-disable-next-line*/
+             <img
+             width='420'
+             height='270'
+             src='/airplane.svg'
+             alt='worldtrip'
+             style={{
+               position: 'absolute',
+               top: '-320px',
+               right: '10%'
+             }}
+           />
+        ) }
+     
         <TripOptionContainer
           backgroundImage='/museum.svg'
           tripOption='clássico'
@@ -77,18 +88,18 @@ export default function Home() {
         flexDirection='column'
         justify='center'
         alignItems='center'
-        height='100px'
+        height={['100px', '120px']}
         py='2rem'
       >
         <Text
-          fontSize='1.6rem'
+          fontSize={['1.12rem', '1.6rem']}
           fontWeight='500'
         >
           Vamos nessa?
         </Text>
 
         <Text
-          fontSize='1.6rem'
+          fontSize={['1.12rem', '1.6rem']}
           fontWeight='500'
         >
           Então escolha seu continente

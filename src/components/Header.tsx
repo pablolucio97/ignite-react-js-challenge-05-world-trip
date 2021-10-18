@@ -18,7 +18,7 @@ export default function Header() {
         >
             <Box
                 position='absolute'
-                left='24'
+                left='4%'
                 cursor='pointer'
             >
             <MdOutlineArrowBackIosNew color='#444444' size={24} />

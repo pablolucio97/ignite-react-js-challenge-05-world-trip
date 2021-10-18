@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import { Box, Text } from '@chakra-ui/react'
+import { Box, Text, useBreakpointValue } from '@chakra-ui/react'
 
 type TripOptionContainerProps = {
     backgroundImage: string;
@@ -7,20 +7,27 @@ type TripOptionContainerProps = {
 }
 
 export default function TripOptionContainer({ backgroundImage, tripOption }: TripOptionContainerProps) {
+
+    const wideScreen = useBreakpointValue({
+        bg: false,
+        lg: true
+    })
+
     return (
         <Box
             m='8'
         >
-            <Image
+            {wideScreen && (<Image
                 width='85'
                 height='85'
                 src={backgroundImage}
                 alt='wolrd-trip'
-            />
+            />)}
             <Text
                 fontSize='1rem'
                 fontWeight='700'
                 textAlign='center'
+                listStyle='circle'
             >
                 {tripOption}
             </Text>

@@ -14,7 +14,7 @@ export default function Banner({
     showTitle,
     showSubtitle,
     title
- }: BannerProps) {
+}: BannerProps) {
     return (
         <Flex
             width='100vw'
@@ -29,22 +29,23 @@ export default function Banner({
         >
             {showTitle && (
                 <Text
-                    ml='24'
+                    ml={['8', '24']}
                     mb='8'
-                    fontSize='2.24rem'
+                    fontSize={['1rem', '1.24rem', '1.6rem']}
                     color='white.900'
                     fontWeight='500'
-                    width='40%'
-                >
+                    width={['64%', '40%']}
+                    >
                     {title}
                 </Text>
             )}
             {showSubtitle && (
                 <Text
-                    ml='24'
-                    mb='8'
-                    fontSize='1.24rem'
-                    color='gray.200'
+                ml={['8', '24']}
+                mb='8'
+                fontSize={['1rem', '1.24rem', '1.6rem']}
+                color='gray.200'
+                width={['64%', '40%']}
                 >
                     Chegou a hora de tirar do papel a viagem que você< br /> sempre sonhou.
                 </Text>
