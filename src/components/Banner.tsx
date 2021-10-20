@@ -16,8 +16,6 @@ export default function Banner({
     largeTitle
 }: BannerProps) {
 
-
-
     return (
         <Flex
             width='100vw'

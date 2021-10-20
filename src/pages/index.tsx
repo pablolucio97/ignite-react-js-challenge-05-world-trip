@@ -3,7 +3,6 @@ import Header from '../components/Header'
 import Banner from '../components/Banner'
 import TripOptionContainer from '../components/TripOptionContainer'
 import Slide from '../components/Slide'
-import { api } from '../services/api'
 
 type Continent = {
   continent: string;

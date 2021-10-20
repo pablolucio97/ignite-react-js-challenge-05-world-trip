@@ -1,6 +1,5 @@
 
 import { Box, Text, Heading, VStack, HStack } from '@chakra-ui/react'
-import Image from 'next/image'
 
 type CityCardProps = {
     city: string;

@@ -1,7 +1,6 @@
 import Image from 'next/image'
 import { Box, Text, useBreakpointValue } from '@chakra-ui/react'
 import { useRouter } from 'next/router'
-import Link from 'next/link'
 
 type TripOptionContainerProps = {
     backgroundImage: string;

@@ -206,7 +206,7 @@ export const getStaticPaths: GetStaticPaths = async () => {
 }
 
 
-export const getStaticProps = async (ctx) => {
+export const getStaticProps : GetStaticProps = async (ctx) => {
 
     const { slug } = ctx.params
 
@@ -222,8 +222,6 @@ export const getStaticProps = async (ctx) => {
         description: data.description,
         most_visited_cities: data.most_visited_cities
     }
-
-
     return {
         props: {
             continent
