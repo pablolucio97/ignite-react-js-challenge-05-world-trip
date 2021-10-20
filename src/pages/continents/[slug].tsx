@@ -35,6 +35,7 @@ type Continent = {
     countries: number;
     languages: number;
     cities: number;
+    description: string;
     most_visited_cities: CityCardProps[];
 
 }
@@ -61,8 +62,7 @@ export default function Countries({ continent }: ContinentProps) {
             <Banner
                 backgroundImage={continent.cover}
                 height={500}
-                showTitle
-                title={continent.continent}
+                largeTitle={continent.continent}
 
             />
             <Flex
@@ -80,10 +80,7 @@ export default function Countries({ continent }: ContinentProps) {
                         textAlign='justify'
                         fontWeight='400'
                     >
-                        A Europa é, por convenção, um dos seis continentes do mundo.
-                        Compreendendo a península ocidental da Eurásia, a Europa geralmente
-                        divide-se da Ásia a leste pela divisória de águas dos montes Urais,
-                        o rio Ural, o mar Cáspio, o Cáucaso, e o mar Negro a sudeste.
+                       {continent.description}
                     </Text>
                 </Box>
                 <HStack
@@ -147,9 +144,7 @@ export default function Countries({ continent }: ContinentProps) {
                                     <PopoverContent
                                         width={['156px', '240px']}
                                     >
-
                                         <PopoverArrow />
-
                                         <PopoverBody
                                             p={['2', '4']}
                                             fontWeight='400'
@@ -166,10 +161,11 @@ export default function Countries({ continent }: ContinentProps) {
             <Flex
                 display='flex'
                 flexDirection='column'
-                justifyContent={['center', 'flex-start']}
+                alignItems={['center', 'center', 'center', 'flex-start']}
                 alignSelf='center'
-                width={['88vw', '900px']}
+                maxWidth={['88vw', '1160px']}
                 minWidth='240px'
+                paddingLeft={['0', '2rem', '2rem','2rem']}
             >
                 <Heading
                     fontWeight='500'
@@ -181,8 +177,8 @@ export default function Countries({ continent }: ContinentProps) {
                 <HStack
                     display='flex'
                     direction={['column', 'row']}
+                    justifyContent={['center', 'center', 'center', 'flex-start']}
                     flexWrap='wrap'
-                    justifyContent='flex-start'
                     mb='120px'
                 >
                     {continent.most_visited_cities.map(city => (
@@ -192,6 +188,7 @@ export default function Countries({ continent }: ContinentProps) {
                             country_flag={city.country_flag}
                             city_background={city.city_background}
                             key={city.city}
+                        
                         />
                     ))}
                 </HStack>
@@ -222,6 +219,7 @@ export const getStaticProps = async (ctx) => {
         languages: data.languages,
         cities: data.cities,
         countries: data.countries,
+        description: data.description,
         most_visited_cities: data.most_visited_cities
     }
 

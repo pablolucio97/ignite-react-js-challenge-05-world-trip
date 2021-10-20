@@ -24,15 +24,18 @@ export default function CountryCard({
             width='256px'
             height='280px'
             boxShadow='0 0 2px 1px #FFBA08'
-            m='16px'
+            style={{
+                margin: '12px'
+            }}
         >
+            {/* eslint-disable-next-line*/}
             <img
                 src={city_background}
                 width='256px'
-                height='173px'
                 alt='world-trip'
                 style={{
-                    maxHeight:'173px'
+                    maxHeight: '173px',
+                    minHeight: '173px'
                 }}
             />
             <HStack
@@ -51,19 +54,25 @@ export default function CountryCard({
                         fontFamily='Barlow'
                         m='4'
                         pl='2'
+                        mb='-2px'
                     >
                         {city}
                     </Heading>
                     <Text
-                        mb='4'
+                        m='4px'
                         color='gray.300'
                         fontFamily='Barlow'
+                        textAlign='center'
+                        width='120px'
+                        mb='4px'
                     >
                         {country}
                     </Text>
                 </VStack>
                 <Box
                     borderRadius='50px'
+                    borderWidth='1px'
+                    borderColor='gray.200'
                 >
                     {/*eslint-disable-next-line*/}
                     <img
@@ -72,12 +81,14 @@ export default function CountryCard({
                         style={{
                             borderRadius: '50%',
                             height: '32px',
-                            width: '32px'
+                            width: '32px',
+                            maxHeight: '32px',
+                            minHeight: '32px',
+                            objectFit:'cover'
                         }}
                     />
                 </Box>
             </HStack>
-
         </Box>
     )
 }

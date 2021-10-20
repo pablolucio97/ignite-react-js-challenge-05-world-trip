@@ -72,12 +72,18 @@ export default function Slide({ slides }: SlidesProps) {
 
                             }}>
                             <Text
-                                fontSize={['2rem', '2.24rem', '2.6rem']}
+                                fontSize={['2rem', '3.24rem', '4.6rem']}
                                 mb='4rem'
                                 color='white.900'
                                 fontWeight='700'
-                                alignSelf='center'
-                                filter='brightness(1)'
+                                textShadow='2px 0 2px #FFBA08'
+                                width={['64%', '40%']}
+                                style={{
+                                    margin: 'auto'
+                                }}
+                                pb='4rem'
+                                pl='4rem'
+                                opacity='.92'
                             >
                                 {slideImage.continent}
                             </Text>

@@ -36,7 +36,6 @@ export default function Home({ continents } : Continents) {
         <Banner
           height={320}
           backgroundImage='/background.png'
-          showTitle
           showSubtitle
           title='5 Continentes, infinitas possibilidades.'
         />
