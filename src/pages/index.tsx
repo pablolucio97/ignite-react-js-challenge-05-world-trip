@@ -3,10 +3,21 @@ import Header from '../components/Header'
 import Banner from '../components/Banner'
 import TripOptionContainer from '../components/TripOptionContainer'
 import Slide from '../components/Slide'
-import { slideImages } from '../utils/data'
-import Image from 'next/image'
+import { api } from '../services/api'
 
-export default function Home({continents}) {
+type Continent = {
+  continent: string;
+  cover: string;
+  slug: number;
+  label: string;
+  img: string;
+}
+
+type Continents = {
+  continents: Continent[]
+}
+
+export default function Home({ continents } : Continents) {
 
   const wideScreen = useBreakpointValue({
     bg: false,
@@ -39,40 +50,28 @@ export default function Home({continents}) {
         flexWrap='wrap'
       >
         {wideScreen && (
-        /*eslint-disable-next-line*/
-             <img
-             width='420'
-             height='270'
-             src='/airplane.svg'
-             alt='worldtrip'
-             style={{
-               position: 'absolute',
-               top: '-320px',
-               right: '10%'
-             }}
-           />
-        ) }
-     
-        <TripOptionContainer
-          backgroundImage='/museum.svg'
-          tripOption='clássico'
-        />
-        <TripOptionContainer
-          backgroundImage='/earth.svg'
-          tripOption='e mais..'
-        />
-        <TripOptionContainer
-          backgroundImage='/night.svg'
-          tripOption='vida noturna'
-        />
-        <TripOptionContainer
-          backgroundImage='/beach.svg'
-          tripOption='praia'
-        />
-        <TripOptionContainer
-          backgroundImage='/building.svg'
-          tripOption='moderno'
-        />
+          /*eslint-disable-next-line*/
+          <img
+            width='420'
+            height='270'
+            src='/airplane.svg'
+            alt='worldtrip'
+            style={{
+              position: 'absolute',
+              top: '-320px',
+              right: '10%'
+            }}
+          />
+        )}
+
+        {continents.map(continent => (
+          <TripOptionContainer
+            key={continent.slug}
+            backgroundImage={continent.img}
+            tripOption={continent.label}
+            continentId={String(continent.slug)}
+          />
+        ))}
 
       </Flex>
       <Divider
@@ -107,7 +106,7 @@ export default function Home({continents}) {
       </Box>
       <Slide
         slides={continents}
-      /> 
+      />
     </Flex>
   )
 }
@@ -116,16 +115,21 @@ export const getStaticProps = async () => {
 
   const data = await fetch('http://localhost:3333/continents')
   const response = await data.json()
+ 
   const continents = response.map(continent => {
-    return{
+    return {
       continent: continent.continent,
-      cover: continent.cover
+      cover: continent.cover,
+      slug: continent.id,
+      label: continent.label,
+      img: continent.img
+
     }
   })
-  
-  return{
-    props:{
-      continents: continents
+
+  return {
+    props: {
+      continents
     }
   }
 }

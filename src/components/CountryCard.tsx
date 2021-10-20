@@ -2,7 +2,22 @@
 import { Box, Text, Heading, VStack, HStack } from '@chakra-ui/react'
 import Image from 'next/image'
 
-export default function CountryCard() {
+type CityCardProps = {
+    city: string;
+    country_flag: string;
+    city_background: string;
+    country: string
+}
+
+
+
+
+export default function CountryCard({
+    city,
+    city_background,
+    country,
+    country_flag
+}: CityCardProps) {
     return (
         <Box
             borderRadius='2px'
@@ -11,11 +26,14 @@ export default function CountryCard() {
             boxShadow='0 0 2px 1px #FFBA08'
             m='16px'
         >
-            <Image
-                src='/londres_img.png'
+            <img
+                src={city_background}
                 width='256px'
                 height='173px'
                 alt='world-trip'
+                style={{
+                    maxHeight:'173px'
+                }}
             />
             <HStack
                 display='flex'
@@ -34,14 +52,14 @@ export default function CountryCard() {
                         m='4'
                         pl='2'
                     >
-                        Londres
+                        {city}
                     </Heading>
                     <Text
                         mb='4'
                         color='gray.300'
                         fontFamily='Barlow'
                     >
-                        Holanda
+                        {country}
                     </Text>
                 </VStack>
                 <Box
@@ -49,7 +67,7 @@ export default function CountryCard() {
                 >
                     {/*eslint-disable-next-line*/}
                     <img
-                        src='/londres_img.png'
+                        src={country_flag}
                         alt='world-trip'
                         style={{
                             borderRadius: '50%',

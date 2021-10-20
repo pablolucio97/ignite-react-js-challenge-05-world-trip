@@ -1,7 +1,7 @@
 import { Slide as Slider } from 'react-slideshow-image';
 import 'react-slideshow-image/dist/styles.css'
 import { MdOutlineArrowBackIosNew, MdOutlineArrowForwardIos } from 'react-icons/md'
-import { Text } from '@chakra-ui/react'
+import { Text, Box } from '@chakra-ui/react'
 
 
 type SlideProps = {
@@ -41,29 +41,32 @@ export default function Slide({ slides }: SlidesProps) {
 
     return (
 
-        <div className="slide-container">
+        <Box className="slide-container"
+            width={['100%', '100%']}
+        >
             <Slider
                 duration={5000}
                 transitionDuration={500}
                 infinite={true}
                 {...props}
-                indicators={true}
                 style={{
                     marginBottom: '24px',
                 }}
             >
                 {slides.map((slideImage, index) => (
                     <div className="each-slide" key={index} >
-                        <div style=
+                        <Box
+
+                            height={['240px', '450px', '640px']}
+                            width={['100%', '100%']}
+                            display='flex'
+                            justifyContent='center'
+                            alignItems='center'
+                            marginTop='48px'
+                            marginBottom='24px'
+                            style=
                             {{
                                 'backgroundImage': `url(${slideImage.cover})`,
-                                height: '450px',
-                                width: '100%',
-                                marginTop: '48px',
-                                marginBottom: '24px',
-                                display: 'flex',
-                                justifyContent: 'center',
-                                alignItems: 'center',
                                 backgroundSize: 'cover',
                                 filter: 'brightness(.64)'
 
@@ -74,16 +77,16 @@ export default function Slide({ slides }: SlidesProps) {
                                 color='white.900'
                                 fontWeight='700'
                                 alignSelf='center'
-                                filter= 'brightness(1)'
-                                >
+                                filter='brightness(1)'
+                            >
                                 {slideImage.continent}
                             </Text>
-               
-                        </div>
+
+                        </Box>
                     </div>
                 ))}
             </Slider>
-        </div>
+        </Box>
     )
 
 

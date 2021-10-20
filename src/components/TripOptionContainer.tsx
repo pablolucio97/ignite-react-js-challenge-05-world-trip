@@ -1,21 +1,30 @@
 import Image from 'next/image'
 import { Box, Text, useBreakpointValue } from '@chakra-ui/react'
+import { useRouter } from 'next/router'
+import Link from 'next/link'
 
 type TripOptionContainerProps = {
     backgroundImage: string;
-    tripOption: string
+    tripOption: string;
+    continentId: string;
 }
 
-export default function TripOptionContainer({ backgroundImage, tripOption }: TripOptionContainerProps) {
+export default function TripOptionContainer({ backgroundImage, tripOption, continentId }: TripOptionContainerProps) {
 
     const wideScreen = useBreakpointValue({
         bg: false,
         lg: true
     })
 
+    const router = useRouter()
+
     return (
         <Box
             m='8'
+            onClick={() => router.push(`/continents/${continentId}`)}
+            _hover={{
+                cursor:'pointer'
+            }}
         >
             {wideScreen && (<Image
                 width='85'

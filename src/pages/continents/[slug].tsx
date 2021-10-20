@@ -8,11 +8,8 @@ import {
     Popover,
     PopoverTrigger,
     PopoverContent,
-    PopoverHeader,
     PopoverBody,
-    PopoverFooter,
     PopoverArrow,
-    PopoverCloseButton,
     Button
 } from '@chakra-ui/react'
 import { AiOutlineInfoCircle } from 'react-icons/ai'
@@ -20,8 +17,34 @@ import { AiOutlineInfoCircle } from 'react-icons/ai'
 import CountryCard from '../../components/CountryCard'
 import Header from '../../components/Header'
 import Banner from '../../components/Banner'
+import { GetStaticPaths, GetStaticProps } from 'next'
+import { api } from '../../services/api'
 
-export default function Countries() {
+
+type CityCardProps = {
+    city: string;
+    country_flag: string;
+    city_background: string;
+    country: string
+}
+
+type Continent = {
+    id: number;
+    continent: string;
+    cover: string;
+    countries: number;
+    languages: number;
+    cities: number;
+    most_visited_cities: CityCardProps[];
+
+}
+
+
+type ContinentProps = {
+    continent: Continent;
+}
+
+export default function Countries({ continent }: ContinentProps) {
 
     const wideScreen = useBreakpointValue({
         base: false,
@@ -36,10 +59,10 @@ export default function Countries() {
         >
             <Header />
             <Banner
-                backgroundImage='/europe.png'
+                backgroundImage={continent.cover}
                 height={500}
                 showTitle
-                title='Europa'
+                title={continent.continent}
 
             />
             <Flex
@@ -51,6 +74,7 @@ export default function Countries() {
                     width={['98%', '50%']}
                     maxWidth={600}
                     p='8'
+                    key={continent.id}
                 >
                     <Text
                         textAlign='justify'
@@ -74,7 +98,7 @@ export default function Countries() {
                         <Heading
                             color='yellow.900'
                         >
-                            50
+                            {continent.countries}
                         </Heading>
                         <Text
                             fontWeight='700'
@@ -86,7 +110,7 @@ export default function Countries() {
                         <Heading
                             color='yellow.900'
                         >
-                            60
+                            {continent.languages}
                         </Heading>
                         <Text
                             fontWeight='700'
@@ -98,7 +122,7 @@ export default function Countries() {
                         <Heading
                             color='yellow.900'
                         >
-                            27
+                            {continent.cities}
                         </Heading>
                         <Text
                             fontWeight='700'
@@ -161,11 +185,50 @@ export default function Countries() {
                     justifyContent='flex-start'
                     mb='120px'
                 >
-                    <CountryCard />
-                    <CountryCard />
-
+                    {continent.most_visited_cities.map(city => (
+                        <CountryCard
+                            country={city.country}
+                            city={city.city}
+                            country_flag={city.country_flag}
+                            city_background={city.city_background}
+                            key={city.city}
+                        />
+                    ))}
                 </HStack>
             </Flex>
         </Flex>
     )
+}
+
+export const getStaticPaths: GetStaticPaths = async () => {
+
+    return {
+        paths: [],
+        fallback: 'blocking'
+    }
+}
+
+
+export const getStaticProps = async (ctx) => {
+
+    const { slug } = ctx.params
+
+    const { data } = await api.get<Continent>(`/continents/${slug}`)
+
+    const continent = {
+        slug: data.id,
+        continent: data.continent,
+        cover: data.cover,
+        languages: data.languages,
+        cities: data.cities,
+        countries: data.countries,
+        most_visited_cities: data.most_visited_cities
+    }
+
+
+    return {
+        props: {
+            continent
+        }
+    }
 }

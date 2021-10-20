@@ -1,11 +1,15 @@
 import Image from 'next/image'
 import { Flex, Box } from "@chakra-ui/layout";
 import { MdOutlineArrowBackIosNew } from 'react-icons/md'
+import { useRouter } from 'next/router'
 
 
 
 
 export default function Header() {
+
+    const { asPath, back } = useRouter()
+
     return (
         <Flex
             as='header'
@@ -21,7 +25,13 @@ export default function Header() {
                 left='4%'
                 cursor='pointer'
             >
-            <MdOutlineArrowBackIosNew color='#444444' size={24} />
+                {asPath === '/' ? null : (
+                    <MdOutlineArrowBackIosNew
+                        color='#444444'
+                        size={24}
+                        onClick={() => back()}
+                    />
+                )}
             </Box>
             <Image
                 src='/logo.svg'
